@@ -1,4 +1,13 @@
 ## Python 3 
-* First time only, create the virtualenv, `virtualenv -p python3 python3`, naming it `python3`
-* Remember to `echo 'python3' >> .gitignore` to ignore the virtualenv from source control
-* `source python3/bin/activate` to activate the virtualenv
+
+Create a new Python 3 virtual environment.
+
+First time
+
+1. `mkdir env`
+1. `pyvenv env/python3`
+1. `echo 'env' >> .gitignore`
+
+In a new shell,
+
+1. `source env/python3/bin/activate`

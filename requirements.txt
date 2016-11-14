@@ -1,0 +1,2 @@
+docopt==0.6.2
+Pygments==2.1.3

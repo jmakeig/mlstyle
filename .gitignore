@@ -1,5 +1,9 @@
-env
+env/
+dist/
+
 __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
+
+.vscode/

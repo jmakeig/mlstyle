@@ -5,6 +5,7 @@ Based on [“Custom syntax in pygments”](http://www.catchmecode.com/2013/03/cu
 ## Usage
 
 * OS X/macOS
+
     ```shell
     pygmentize -f rtf -O "style=marklogic,fontface=Consolas" setup.py | pbcopy
     ```

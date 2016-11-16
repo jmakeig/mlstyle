@@ -20,9 +20,17 @@ setup(
     name='marklogicstyle',
     version='0.1.0',
     packages=find_packages(),
+    platforms=['POSIX', 'Windows'],
     entry_points=
     """
     [pygments.styles]
     marklogic = marklogicstyle.style:MarkLogicStyle
     """,
+    install_requires=[
+        'docopt', 'Pygments'
+    ],
+    author='Justin Makeig',
+    author_email='jmpublic+github@makeig.com',
+    url='https://github.com/jmakeig/pulchritude',
+    license='Apache-2.0',
 )

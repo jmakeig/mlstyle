@@ -14,22 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from setuptools import setup, find_packages
+import sys
+import docopt
 
-setup(
-    name='marklogicstyle',
-    version='0.1.0',
-    packages=find_packages(),
-    platforms=['POSIX', 'Windows'],
-    entry_points={
-        'pygments.styles': ['marklogic = marklogicstyle.style:MarkLogicStyle'],
-        'console_scripts': ['mlstyle = marklogicstyle.cli:main'],
-    },
-    install_requires=[
-        'docopt', 'Pygments'
-    ],
-    author='Justin Makeig',
-    author_email='jmpublic+github@makeig.com',
-    url='https://github.com/jmakeig/pulchritude',
-    license='Apache-2.0',
-)
+def main(args=sys.argv):
+    """
+    Main command line entry point.
+    """
+    print('asdfXXXXXXX')
+    return 0

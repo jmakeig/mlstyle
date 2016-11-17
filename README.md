@@ -14,7 +14,7 @@ _“How does it work?”_
 
 ## Installation
 
-`mlstyle` is implemented in [Python](https://www.python.org). It was developed for Python3, but probably works with recent versions of Python 2 as well. 
+`mlstyle` is implemented in [Python](https://www.python.org). It was developed for Python3, but works with recent versions of Python 2 as well. 
 
 ```shell
 pip install marklogicstyle
@@ -57,7 +57,7 @@ Use a Python 3 [virtual environment](https://docs.python.org/3/library/venv.html
 First time,
 
 1. `mkdir env`
-1. `pyvenv env/python3`
+1. `pyvenv env/python3` or `virtualenv env/python2` for Python 2
 
 In a virgin shell,
 

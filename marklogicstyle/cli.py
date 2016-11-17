@@ -23,7 +23,7 @@ def main(args=sys.argv):
     """
     Main command line entry point.
     """
-    print(args, file=sys.stderr)
+    # print(args, file=sys.stderr)
     ml_opts = [
         '-P', 'fontface=Consolas',
         '-P', 'style=marklogic',

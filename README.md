@@ -1,30 +1,62 @@
+# `mlstyle`
+
 A command-line code formatter that enforces MarkLogic corporate branding guidelines. 
 
-Based on [“Custom syntax in pygments”](http://www.catchmecode.com/2013/03/custom-syntax-in-pygments.html).
+Given a snippet of code as a file or on your clipboard, `mlstyle` will turn that into pretty, syntax-highlighted text suitable for pasting into PowerPoint, or just about anywhere.
 
-## Usage
+_“Why would I want to use this?”_
 
-* OS X/macOS
+Code snippets in PowerPoint or Word (or anywhere outside of your editor) are very difficult to read without proper formatting. Moreover, one-off implementations tend to vary greatly in aesthetics and usability. `mlstyle` makes it so you don’t have to think about anything when it comes to formatting your code for presentation outside of your editor. It will format your code according to the official MarkLogic branding guidelines and usability standards.
 
-    ```shell
-    pygmentize -f rtf -O "style=marklogic,fontface=Consolas" setup.py | pbcopy
-    ```
-* Windows _(TODO)_
+_“How does it work?”_
+
+`mlstyle` is a very thin wrapper around the popular Python-based [Pygments](http://pygments.org) library. Pygments supports hundreds of different languages and other data types and dozens of output formats. `mlstyle` implements the same [command-line interface as `pygmentize`](http://pygments.org/docs/cmdline/), the Pygments command-line utility. `mlstyle` seeds the appropriate defaults for the official MarkLogic branding guidelines. 
 
 ## Installation
+
+`mlstyle` is implemented in [Python](https://www.python.org). It was developed for Python3, but probably works with recent versions of Python 2 as well. 
 
 ```shell
 pip install marklogicstyle
 ```
 
+It is recommended, but not required that you install `mlstyle` into a virtual environemnt. If you’re installing globally, you may be required to use `sudo -H` _(not recommended)_.
+
+## Usage
+
+`mlstyle` is drop-in replacement for the [`pygmentize` command-line interface](http://pygments.org/docs/cmdline/) for Pygments.
+
+### OS X/macOS
+
+For example, to generate an RTF document with a syntax-highlighted version of `setup.py`,
+
+```shell
+mlstyle -f rtf setup.py
+```
+
+or send the highlighted text to Microsoft Word
+
+```shell
+mlstyle -f rtf setup.py | open -f -b com.microsoft.Word
+```
+
+or to the clipboard to paste anywhere
+
+```shell
+mlstyle -f rtf setup.py | pbcopy
+```
+
+### Windows _(TODO)_
+
+--------------------------------------------------------
+
 ## Development Set-up
 
-Use a Python 3 virtual environment.
+Use a Python 3 [virtual environment](https://docs.python.org/3/library/venv.html).
 
 First time,
 
 1. `mkdir env`
-1. `echo 'env' >> .gitignore`
 1. `pyvenv env/python3`
 
 In a virgin shell,

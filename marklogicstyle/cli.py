@@ -17,9 +17,23 @@
 import sys
 import docopt
 
+from pygments.cmdline import main as pyg
+
 def main(args=sys.argv):
     """
     Main command line entry point.
     """
-    print('asdfXXXXXXX')
-    return 0
+    print(args, file=sys.stderr)
+    ml_opts = [
+        '-P', 'fontface=Consolas',
+        '-P', 'style=marklogic',
+    ]
+    # ags = [
+    #     '/Users/jmakeig/Workspaces/pulchritude/env/python3/bin/mlstyle',
+    #     '-P', 'style=friendly',
+    #     '-f', 'rtf',
+    #     'setup.py',
+    # ]
+    args[1:1] = ml_opts
+    return pyg(args)
+

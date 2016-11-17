@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='marklogicstyle',
-    version='0.2.0',
+    version='0.3.0',
     description='MarkLogic code syntax highlighting and beautification for PowerPoint',
     long_description="""
 A command-line code formatter that enforces MarkLogic corporate branding guidelines.

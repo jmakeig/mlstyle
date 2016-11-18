@@ -30,13 +30,15 @@ It is recommended, but not required that you install `mlstyle` into a virtual en
 
 ### OS X/macOS
 
-For example, to generate an RTF document with a syntax-highlighted version of `setup.py`,
+For example, to generate an RTF document with a syntax-highlighted version of `myfile.xqy`,
 
 ```shell
 mlstyle -f rtf myfile.xqy
 ```
 
-or send the highlighted text to Microsoft Word
+Pygments will determine the language from the file extension for most common extensions. For stdin or less common file types you can explicitly specify a lexer with the `-l` option, for example, `-l xquery`. For more information, see the [pygmentize documentation](http://pygments.org/docs/cmdline/).
+
+Send the highlighted text to Microsoft Word
 
 ```shell
 mlstyle -f rtf myfile.xqy | open -f -b com.microsoft.Word

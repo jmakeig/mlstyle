@@ -36,6 +36,6 @@ Given a snippet of code as a file or on your clipboard, mlstyle will turn that i
     ],
     author='Justin Makeig',
     author_email='jmpublic+github@makeig.com',
-    url='https://github.com/jmakeig/pulchritude',
+    url='https://github.com/jmakeig/mlstyle',
     license='Apache-2.0',
 )

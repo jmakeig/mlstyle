@@ -22,18 +22,16 @@ from pygments.cmdline import main as pyg
 def main(args=sys.argv):
     """
     Main command line entry point.
+    Pass-through for pygmentize CLI.
     """
-    # print(args, file=sys.stderr)
-    ml_opts = [
-        '-P', 'fontface=Consolas',
-        '-P', 'style=marklogic',
-    ]
-    # ags = [
-    #     '/Users/jmakeig/Workspaces/pulchritude/env/python3/bin/mlstyle',
-    #     '-P', 'style=friendly',
-    #     '-f', 'rtf',
-    #     'setup.py',
-    # ]
-    args[1:1] = ml_opts
-    return pyg(args)
 
+    pass_thru = ['-L', '-S', '-H', '-v', '-h']
+
+    if not list(filter(set(args).__contains__, pass_thru)): # List intersection
+        ml_opts = [
+            '-P', 'fontface=Consolas',
+            '-P', 'style=marklogic',
+        ]
+        args[1:1] = ml_opts
+
+    return pyg(args)

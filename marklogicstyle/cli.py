@@ -29,9 +29,11 @@ def main(args=sys.argv):
 
     if not list(filter(set(args).__contains__, pass_thru)): # List intersection
         ml_opts = [
-            '-P', 'fontface=Consolas',
             '-P', 'style=marklogic',
+            '-P', 'fontface=Consolas',
+            '-P', 'fontsize=32', # Doesn’t seem to have any effect pasting into PowerPoint
         ]
         args[1:1] = ml_opts
 
+    # print(args, file=sys.stderr)
     return pyg(args)

@@ -14,13 +14,15 @@ _“How does it work?”_
 
 ## Installation
 
-`mlstyle` is implemented in [Python](https://www.python.org). It was developed for Python3, but works with recent versions of Python 2 as well. 
+`mlstyle` is implemented in [Python](https://www.python.org). It was developed for Python3, but works with recent versions of Python 2 as well. macOS and Linux come with Python pre-installed. Windows users will have to [download](https://www.python.org) the runtime.
 
 ```shell
 pip install marklogicstyle
 ```
 
-It is recommended, but not required that you install `mlstyle` into a virtual environemnt. If you’re installing globally, you may be required to use `sudo -H` _(not recommended)_.
+On Windows, `pip.exe` is installed in the `Scripts` direcotry of the Python installation.
+
+It is recommended, but not required that you install `mlstyle` into a virtual environemnt. If you’re installing globally, you may be required to use `sudo -H` or otherwise run the installation as an administrator _(not recommended)_.
 
 ## Usage
 

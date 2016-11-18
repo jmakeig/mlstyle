@@ -1,4 +1,4 @@
-# `mlstyle`
+# mlstyle
 
 A command-line code formatter that enforces MarkLogic corporate branding guidelines. 
 

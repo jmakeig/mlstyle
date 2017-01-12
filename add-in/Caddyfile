@@ -1,0 +1,6 @@
+localhost:2020 {
+  bind {$ADDRESS}
+  tls self_signed
+  
+  root /Users/jmakeig/Workspaces/mlstyle/add-in
+}

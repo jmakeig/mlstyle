@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:type="TaskPaneApp">
+    <Id>a37273e9-0828-4a02-b7eb-4b76a1a13638</Id>
+    <Version>1.0.0.0</Version>
+    <ProviderName>Microsoft</ProviderName>
+    <DefaultLocale>en-US</DefaultLocale>
+    <DisplayName DefaultValue="Boilerplate content" />
+    <Description DefaultValue="Insert boilerplate content into a Word document." />
+    <Hosts>
+        <Host Name="Document"/>
+    </Hosts>
+    <DefaultSettings>
+        <SourceLocation DefaultValue="https://jmakeig.github.io" />
+    </DefaultSettings>
+    <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

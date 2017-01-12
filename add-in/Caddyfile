@@ -1,6 +1,9 @@
+# caddy -conf add-in/Caddyfile -root ./add-in
+
 localhost:2020 {
   bind {$ADDRESS}
   tls self_signed
   
-  root /Users/jmakeig/Workspaces/mlstyle/add-in
+  # Relative to current working directory, not location of this file
+  # root .
 }
